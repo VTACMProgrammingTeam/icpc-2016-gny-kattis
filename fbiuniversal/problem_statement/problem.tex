@@ -1,0 +1,53 @@
+\problemname{FBI Universal Control Numbers}
+
+The \textbf{FBI} has recently changed its \emph{Universal Control Numbers (UCN)} for identifying individuals who
+are in the FBI's fingerprint database to an eight digit base $27$ value with a ninth check digit. The digits
+used are:
+
+\begin{center}
+\begin{verbatim}
+0123456789ACDEFHJKLMNPRTVWX
+\end{verbatim}
+\end{center}
+
+Some letters are not used because of possible confusion with other digits:
+
+\begin{center}
+\begin{verbatim}
+B->8, G->C, I->1, O->0, Q->0, S->5, U->V, Y->V, Z->2
+\end{verbatim}
+\end{center}
+
+The check digit is computed as:
+
+\begin{center}
+\begin{verbatim}
+(2*D1 + 4*D2 + 5*D3 + 7*D4 + 8*D5 + 10*D6 + 11*D7 + 13*D8) mod 27
+\end{verbatim}
+\end{center}
+
+Where \texttt{Dn} is the $n^{\text{th}}$ digit from the left.
+
+This choice of \emph{check} digit detects any single digit error and
+any error transposing an adjacent pair of the original eight digits.
+
+For this problem, you will write a program to parse a \emph{UCN} input by a user. Your program should
+accept decimal digits and \emph{any} capital letter as digits. If any of the \emph{confusing} letters appear in the
+input, you should replace them with the corresponding valid digit as listed above. Your program
+should compute the correct \emph{check} digit and compare it to the entered check digit. The input is
+rejected if they do not match otherwise the decimal (base $10$) value corresponding to the first eight
+digits is returned.
+
+\section*{Input}
+
+The first line of input contains a single decimal integer $P$, ($1 \le P \le 10\,000$), which is the number of
+data sets that follow. Each data set should be processed identically and independently.
+Each data set consists of a single line of input. It contains the data set number, $K$, followed by a
+single space, followed by $9$ decimal digits or capital (alphabetic) characters.
+
+\section*{Output}
+
+For each data set there is one line of output. The single output line consists of the data set number,
+$K$, followed by a single space followed by the string ``\texttt{Invalid}'' (without the quotes) or the 
+decimal value corresponding to the first eight digits.
+

@@ -1,0 +1,33 @@
+\problemname{DA-Sort}
+
+You recently learned a new way to sort an array of numbers in your algorithms course. The algorithm
+sorts an array of numbers by repeatedly performing the \emph{Delete-and-Append} operation. The 
+\emph{Delete-and-Append} operation consists of three steps:
+
+\begin{enumerate}
+\item Choose an element from the array.
+\item Delete the chosen element from the array.
+\item Append the chosen element to the end of the array.
+\end{enumerate}
+
+Being a curious student, you wonder what is the minimum number of \emph{Delete-and-Append} 
+operations required to sort a given array.
+
+\section*{Input}
+
+The first line of input contains a single decimal integer $P$, ($1 \le P \le 100$), which is the number of
+data sets that follow. Each data set should be processed identically and independently.
+
+Each data set consists of two or more lines of input. The first line contains the data set number, $K$,
+followed by a single space, followed by an integer $N$, ($1 \le N \le 1\,000$), which is the length of the
+array to sort. The remaining lines in the dataset contains $N$ positive integers that comprise the array
+to be sorted, $10$ values per line, except for the last line which may have less than $10$ values. All the
+array elements are no larger than $10^9$. The same value may appear more than once in the array to
+be sorted.
+
+\section*{Output}
+
+For each data set there is one line of output. The single output line consists of the data set number,
+$K$, followed by a single space followed by an integer which is the minimum number of \emph{Delete-and-Append}
+operations required to sort the array.
+

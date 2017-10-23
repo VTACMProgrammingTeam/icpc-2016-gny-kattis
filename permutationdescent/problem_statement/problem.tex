@@ -1,0 +1,46 @@
+\problemname{Permutation Descent Counts}
+
+Given a positive integer, $N$, a permutation of order $N$ is a one-to-one (and thus onto) function from the
+set of integers from $1$ to $N$ to itself. If $p$ is such a function, we represent the function by a list of its
+values:
+
+\[
+[ \, p(1) \, p(2) \, \ldots \, p(N) \, ]
+\]
+
+For example,
+$[5 \, 6 \, 2 \, 4 \, 7 \, 1 \, 3]$ represents the function from ${ 1 \ldots 7 }$ to itself which takes $1$ to $5$, $2$ to $6$, ... , $7$ to $3$.
+
+For any permutation $p$, a descent of $p$ is an integer $k$ for which $p(k) > p(k+1)$. For example, the
+permutation $[5 \, 6 \, 2 \, 4 \, 7 \, 1 \, 3]$ has a descent at $2$ ($6 > 2$) and $5$ ($7 > 1$).
+
+For permutation $p$, $\text{des}(p)$ is the number of descents in $p$. For example, $\text{des}([5 \, 6 \, 2 \, 4 \, 7 \, 1 \, 3]) = 2$. 
+The identity permutation is the only permutation with $\text{des}(p) = 0$. The reversing permutation with
+$p(k) = N + 1 - k$ is the only permutation with $\text{des}(p) = N - 1$.
+
+The permutation descent count (PDC) for given order $N$ and value $v$ is the number of permutations $p$
+of order $N$ with $\text{des}(p) = v$. For example:
+
+\begin{verbatim}
+        PDC(3, 0) = 1 { [ 1 2 3 ] }
+        PDC(3, 1) = 4 { [ 1 3 2 ], [ 2 1 3 ], [ 2 3 1 ], 3 1 2 ] }
+        PDC(3, 2) = 1 { [ 3 2 1 ] }
+\end{verbatim}
+
+Write a program to compute the PDC for inputs $N$ and $v$. To avoid having to deal with very large
+numbers, your answer (and your intermediate calculations) will be computed modulo $1001113$.
+
+\section*{Input}
+
+The first line of input contains a single integer $P$, ($1 \le P \le 1\,000$), which is the number of data sets that
+follow. Each data set should be processed identically and independently.
+
+Each data set consists of a single line of input. It contains the data set number, $K$, 
+followed by the integer order, $N$ ($2 \le N \le 100$), followed by an integer value, $v$ ($0 \le v \le N-1$).
+
+\section*{Output}
+
+For each data set there is a single line of output. The single output line consists of the data set
+number, $K$, followed by a single space followed by the PDC of $N$ and $v$ as a decimal integer number 
+modulo $1001113$.
+

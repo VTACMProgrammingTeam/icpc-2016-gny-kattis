@@ -1,0 +1,11 @@
+P (1 <= P <= 10000);
+{[*P]
+    K Bx:double Cx:double Cy:double L:double (K == K#, Bx > 0, Cy > 0, 
+        Bx <= 100.0, Cy <= 100.0, -100.0 <= Cx <= 100.0,
+	    Bx + sqrt((Cx-Bx)*(Cx-Bx) + Cy*Cy) + sqrt(Cx*Cx + Cy*Cy) + .05 <= L,
+        L < 1000.0,
+        Bx + sqrt((Cx-Bx)*(Cx-Bx) + Cy*Cy) > sqrt(Cx*Cx + Cy*Cy),
+        Bx + sqrt(Cx*Cx + Cy*Cy) > sqrt((Cx-Bx)*(Cx-Bx) + Cy*Cy),
+        sqrt(Cx*Cx + Cy*Cy) + sqrt((Cx-Bx)*(Cx-Bx) + Cy*Cy) > Bx
+    );
+}

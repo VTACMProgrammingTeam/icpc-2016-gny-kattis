@@ -1,0 +1,4 @@
+s:string w h hassolution (w <= 100, h <= 100, s %% "start", hassolution == 0 || hassolution == 1);
+{[*h]
+   l:string (l %% "[01245689Aa]+", length(l) == w);
+}
