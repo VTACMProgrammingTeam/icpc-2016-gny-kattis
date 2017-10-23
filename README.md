@@ -15,6 +15,7 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/
 
 Order in which problems were posed at the contest:
 
+```
 whichbase               A - Which Base is it Anyway?
 fbiuniversal            B - FBI Universal Control Numbers
 marypartitions          C - m-ary Partitions
@@ -25,3 +26,4 @@ magicalmysteryknight    G - Magical Mystery Knight's Tour
 dasort                  H - DA-Sort
 amazing                 I - A Mazing!
 smoothedgardens         J - Smoothed Gardens
+```
